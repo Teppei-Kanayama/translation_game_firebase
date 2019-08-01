@@ -1,0 +1,28 @@
+body {
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+li {
+  line-height: 2;
+}
+
+input[type="text"] {
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 300px;
+}
+
+h1 > button {
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
