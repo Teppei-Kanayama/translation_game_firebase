@@ -43,7 +43,7 @@
             const li = document.createElement('li');
             const d = change.doc.data();
             //li.textContent = d.uid.substr(0, 8) + ': ' + change.doc.data().message;
-            li.textContent = change.doc.data().message;
+            li.textContent = change.doc.data().source + ' -> ' + change.doc.data().target;
             messages.appendChild(li);
           }
         })
@@ -95,7 +95,8 @@
 
       // collection (データベース)にvalを追加する
       collection.add({
-        message: data,
+        source: val,
+        target: data,
         created: firebase.firestore.FieldValue.serverTimestamp(),
         uid: me ? me.uid : 'nobody'
       })
